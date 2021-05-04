@@ -13,10 +13,10 @@ public class Persona extends Thread{
     int val;
     public Persona(Bagni b,int val) {
         this.b = b;
-        this.val=val;
+        this.val=val;//valore di controllo per vedere se è uomo o donna
     }
     
-    //metodo chiama bagno m
+    //metodo chiama bagno maschile o femminile
     public void run()
     {
         if(val==0)
@@ -25,9 +25,8 @@ public class Persona extends Thread{
         }
         if(val==1)
        {
-          b.bagnoF();
+          b.bagnoF();//chiama il metodo del bagno per le femmine
        }
-        
         }
     }
     
