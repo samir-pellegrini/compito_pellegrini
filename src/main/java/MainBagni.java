@@ -23,32 +23,35 @@ public class MainBagni {
         Bagni b2=new Bagni(m,f,"giovanni");//istanza di tipo bagno maschile
         Bagni b3=new Bagni(m,f,"mario");//istanza di tipo bagno maschile
         Bagni b4=new Bagni(m,f,"samir");//istanza di tipo bagno maschile
-         
-         Thread m1=new personaM(b1);//istanza del thread
-         Thread m2=new personaM(b2);//istanza del thread
-         Thread m3=new personaM(b3);//istanza del thread
-         Thread m4=new personaM(b4);//istanza del thread
         
-         m1.start();//start del thread maschio con i maschi
-         m2.start();//start del thread maschio con i maschi
-         m3.start();//start del thread maschio con i maschi
-         m4.start();//start del thread maschio con i maschi
-         
         Bagni b5=new Bagni(m,f,"maria");//istanza di tipo bagno femminile
         Bagni b6=new Bagni(m,f,"martina");//istanza di tipo bagno femminile
         Bagni b7=new Bagni(m,f,"francesca");//istanza di tipo bagno femminile
         Bagni b8=new Bagni(m,f,"anna");//istanza di tipo bagno femminile
          
-         Thread f1=new personaF(b5);//si instanzia il thread con le femmine
-         Thread f2=new personaF(b6);//si instanzia il thread con le femmine
-         Thread f3=new personaF(b7);//si instanzia il thread con le femmine
-         Thread f4=new personaF(b8);//si instanzia il thread con le femmine
+         Thread m1=new Persona(b1,0);//istanza del thread
+         Thread m2=new Persona(b2,0);//istanza del thread
+         Thread m3=new Persona(b3,0);//istanza del thread
+         Thread m4=new Persona(b4,0);//istanza del thread
         
+         Thread f1=new Persona(b5,1);//si instanzia il thread con le femmine
+         Thread f2=new Persona(b6,1);//si instanzia il thread con le femmine
+         Thread f3=new Persona(b7,1);//si instanzia il thread con le femmine
+         Thread f4=new Persona(b8,1);//si instanzia il thread con le femmine
         
+         m1.start();//start del thread maschio con i maschi
+         m2.start();//start del thread maschio con i maschi
+         m3.start();//start del thread maschio con i maschi
+         m4.start();//start del thread maschio con i maschi
          f1.start();//start del thread femmina
          f2.start();//start del thread femmina
          f3.start();//start del thread femmina
          f4.start();//start del thread femmina
+         
+        
+        
+        
+         
          
     }
     

@@ -8,18 +8,28 @@
  *
  * @author informatica
  */
-public class personaM extends Thread{
+public class Persona extends Thread{
     Bagni b;//instanza bagno
-
-    public personaM(Bagni b) {
+    int val;
+    public Persona(Bagni b,int val) {
         this.b = b;
+        this.val=val;
     }
     
     //metodo chiama bagno m
     public void run()
     {
+        if(val==0)
+        {
         b.bagnoM();//chiama il metodo del bagno per i maschi
+        }
+        if(val==1)
+       {
+          b.bagnoF();
+       }
+        
+        }
     }
     
     
-}
+
